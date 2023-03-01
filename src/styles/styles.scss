@@ -12,6 +12,10 @@
 :root {
   --text-color: #fafafa;
 }
+html,
+body {
+  scroll-behavior: smooth !important;
+}
 
 body::-webkit-scrollbar {
   width: 12px;
