@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 8px;
+  font-family: "Libre Baskerville", serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --text-color: #fafafa;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(17, 26, 33);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #b1b1b1;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.inicio-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-image: url("../assets/icemountain.jpg");
+  background-size: cover;
+
+  .navBar {
+    display: flex;
+    align-self: flex-end;
+    padding: 2rem;
+    height: 10vh;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 1rem 2rem;
+  }
+  li:hover {
+    scale: 1.2;
+  }
+  a {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+  .apresentacao {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    gap: 2rem;
+    color: var(--text-color);
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+    svg {
+      height: 4rem;
+      width: 4rem;
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+}
+
+.layoutSections {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 2px 2px 10px 2px rgba(17, 26, 33, 255),
+    2px 2px 60px 80px rgba(17, 26, 33, 255),
+    2px 2px 10px 2px rgba(17, 26, 33, 255);
+  background-color: #111a21;
+}
+.topicos {
+  font-size: 5rem;
+  color: var(--text-color);
+}
+.bg-about {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-imgs {
+    display: flex;
+    height: 80vh;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+      height: 40vh;
+      width: 40%;
+      margin-bottom: 4rem;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin-bottom: 1rem;
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0e161b;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: #ddd;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+      }
+    }
+    input:checked + .slider {
+      background-color: #0b1216;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #0b1216;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    .imgs {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 4px 4px 4px #070b0e;
+    }
+    .real {
+      background-image: url(../assets/netto-real.jpeg);
+      background-size: cover;
+    }
+    .avatar {
+      background-image: url(../assets/ice.jpg);
+    }
+  }
+  .box-sobre {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40%;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      gap: 5rem;
+    }
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+    .texto {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      .history-text {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        color: var(--text-color);
+      }
+    }
+    .tecnologias {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .icones {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      svg {
+        color: var(--text-color);
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+}
+#projetos {
+  display: flex;
+  flex-direction: column;
+  .projetos {
+    display: flex;
+    width: 50%;
+    padding: 2rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .titulo-projeto {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-color);
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
+#contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  form {
+    display: flex;
+    width: 60%;
+    gap: 4rem;
+    color: #fafafa;
+    input {
+      padding: 0 10px;
+      letter-spacing: 1px;
+      background-color: #fafafa;
+    }
+    .box-contato {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      gap: 6rem;
+      input {
+        height: 6rem;
+        font-size: 2rem;
+      }
+      .fields {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        label {
+          font-size: 3rem;
+          margin-bottom: 4px;
+        }
+      }
+    }
+    .box-mensagens {
+      min-height: 100%;
+      width: 50%;
+      label {
+        font-size: 3rem;
+        margin-bottom: 4px;
+      }
+      .fields {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+      #message {
+        height: 100%;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        padding: 10px;
+        text-align: initial;
+        resize: none;
+        background-color: #fafafa;
+      }
+    }
+  }
+  button {
+    height: 8rem;
+    width: 20%;
+    font-size: 2rem;
+    background-color: #aaffaa;
+    border: none;
+    border-radius: 4px;
+    &:hover {
+      background-color: #0f0;
+      cursor: pointer;
+    }
+  }
+}
