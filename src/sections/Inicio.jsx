@@ -3,7 +3,7 @@ import Socials from "../components/Socials";
 
 export default function Inicio() {
   return (
-    <div className="container inicio-area">
+    <div id="home" className="container inicio-area">
       <NavBar />
       <Socials />
     </div>

@@ -4,12 +4,12 @@ export default function Projetos() {
       <h1 className="topicos">PROJETOS</h1>
       <div className="projetos">
         <div className="cards">
-          <img src="https://picsum.photos/200/300" alt="CARRINHO DE COMPRAS" />
+          <img src="https://picsum.photos/300/300" alt="CARRINHO DE COMPRAS" />
           <div className="titulo-projeto">CARRINHO DE COMPRAS</div>
         </div>
         <div className="cards">
           <img src="https://picsum.photos/200/300" alt="CRUD+FIREBASE" />
-          <div className="titulo-projeto">CRUD+FIREBASE</div>
+          <div className="titulo-projeto">CRUD + FIREBASE</div>
         </div>
         <div className="cards">
           <img src="https://picsum.photos/200/300" alt="GERADOR QRCODE" />
@@ -17,7 +17,7 @@ export default function Projetos() {
         </div>
         <div className="cards">
           <img src="https://picsum.photos/200/300" alt="UNDO-REDO" />
-          <div className="titulo-projeto">UNDO-REDO</div>
+          <div className="titulo-projeto">UNDO REDO</div>
         </div>
         <div className="cards">
           <img src="https://picsum.photos/200/300" alt="LOGIN PAGE" />

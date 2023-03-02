@@ -103,6 +103,9 @@ body::-webkit-scrollbar-thumb {
 .topicos {
   font-size: 5rem;
   color: var(--text-color);
+  @media screen and (max-width: 414px) {
+    font-size: 3rem;
+  }
 }
 .bg-about {
   display: flex;
@@ -122,10 +125,10 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    @media screen and (max-width: 768px) {
-      height: 40vh;
+    @media screen and (max-width: 414px) {
+      height: 30vh;
       width: 40%;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
     .switch {
       position: relative;
@@ -204,7 +207,7 @@ body::-webkit-scrollbar-thumb {
     width: 40%;
     @media screen and (max-width: 768px) {
       width: 90%;
-      gap: 5rem;
+      gap: 4rem;
     }
     h1 {
       display: flex;
@@ -239,7 +242,31 @@ body::-webkit-scrollbar-thumb {
         color: var(--text-color);
         width: 8rem;
         height: 8rem;
+        @media screen and (max-width: 414px) {
+          width: 7rem;
+          height: 5rem;
+        }
       }
+    }
+  }
+}
+#home {
+  @media screen and (max-width: 414px) {
+    gap: 12rem;
+    padding: 0 4rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .navBar {
+      align-self: center;
+    }
+  }
+}
+#about {
+  .history-text {
+    @media screen and (max-width: 414px) {
+      font-size: 12px;
+      text-align: justify;
     }
   }
 }
@@ -253,8 +280,19 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 4rem;
+    @media screen and (max-width: 414px) {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      width: 80%;
+      border-radius: 4px;
+    }
   }
   .titulo-projeto {
+    padding-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     margin-top: 2rem;
@@ -264,28 +302,53 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     width: 25%;
+    padding: 2px;
+    background: rgba(21, 30, 40, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(11, 18, 15, 0.8);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    @media screen and (max-width: 414px) {
+      width: 100%;
+      scroll-snap-align: end;
+    }
+    img {
+      width: 300px;
+      height: 100%;
+    }
   }
 }
 #contato {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
   form {
     display: flex;
     width: 60%;
     gap: 4rem;
     color: #fafafa;
+    @media screen and (max-width: 414px) {
+      flex-direction: column;
+      width: 80%;
+      gap: 4rem;
+    }
     input {
       padding: 0 10px;
       letter-spacing: 1px;
       background-color: #fafafa;
     }
+
     .box-contato {
       display: flex;
       flex-direction: column;
       width: 50%;
       height: 100%;
       gap: 6rem;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        gap: 2rem;
+      }
       input {
         height: 6rem;
         font-size: 2rem;
@@ -303,6 +366,9 @@ body::-webkit-scrollbar-thumb {
     .box-mensagens {
       min-height: 100%;
       width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
       label {
         font-size: 3rem;
         margin-bottom: 4px;

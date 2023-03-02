@@ -104,6 +104,11 @@ body::-webkit-scrollbar-thumb {
   font-size: 5rem;
   color: var(--text-color);
 }
+@media screen and (max-width: 414px) {
+  .topicos {
+    font-size: 3rem;
+  }
+}
 
 .bg-about {
   display: flex;
@@ -126,11 +131,11 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
   .bg-about .box-imgs {
-    height: 40vh;
+    height: 30vh;
     width: 40%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 }
 .bg-about .box-imgs .switch {
@@ -203,7 +208,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 768px) {
   .bg-about .box-sobre {
     width: 90%;
-    gap: 5rem;
+    gap: 4rem;
   }
 }
 .bg-about .box-sobre h1 {
@@ -240,6 +245,32 @@ body::-webkit-scrollbar-thumb {
   width: 8rem;
   height: 8rem;
 }
+@media screen and (max-width: 414px) {
+  .bg-about .box-sobre .tecnologias svg {
+    width: 7rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #home {
+    gap: 12rem;
+    padding: 0 4rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #home .navBar {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #about .history-text {
+    font-size: 12px;
+    text-align: justify;
+  }
+}
 
 #projetos {
   display: flex;
@@ -253,7 +284,20 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   gap: 4rem;
 }
+@media screen and (max-width: 414px) {
+  #projetos .projetos {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 80%;
+    border-radius: 4px;
+  }
+}
 #projetos .titulo-projeto {
+  padding-bottom: 2rem;
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
@@ -263,6 +307,22 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   width: 25%;
+  padding: 2px;
+  background: rgba(21, 30, 40, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(11, 18, 15, 0.8);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+}
+@media screen and (max-width: 414px) {
+  #projetos .cards {
+    width: 100%;
+    scroll-snap-align: end;
+  }
+}
+#projetos .cards img {
+  width: 300px;
+  height: 100%;
 }
 
 #contato {
@@ -276,6 +336,13 @@ body::-webkit-scrollbar-thumb {
   gap: 4rem;
   color: #fafafa;
 }
+@media screen and (max-width: 414px) {
+  #contato form {
+    flex-direction: column;
+    width: 80%;
+    gap: 4rem;
+  }
+}
 #contato form input {
   padding: 0 10px;
   letter-spacing: 1px;
@@ -287,6 +354,12 @@ body::-webkit-scrollbar-thumb {
   width: 50%;
   height: 100%;
   gap: 6rem;
+}
+@media screen and (max-width: 768px) {
+  #contato form .box-contato {
+    width: 100%;
+    gap: 2rem;
+  }
 }
 #contato form .box-contato input {
   height: 6rem;
@@ -304,6 +377,11 @@ body::-webkit-scrollbar-thumb {
 #contato form .box-mensagens {
   min-height: 100%;
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  #contato form .box-mensagens {
+    width: 100%;
+  }
 }
 #contato form .box-mensagens label {
   font-size: 3rem;
