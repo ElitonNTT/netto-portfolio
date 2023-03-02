@@ -4,7 +4,7 @@ export default function Projetos() {
       <h1 className="topicos">PROJETOS</h1>
       <div className="projetos">
         <div className="cards">
-          <img src="https://picsum.photos/300/300" alt="CARRINHO DE COMPRAS" />
+          <img src="https://picsum.photos/200/300" alt="CARRINHO DE COMPRAS" />
           <div className="titulo-projeto">CARRINHO DE COMPRAS</div>
         </div>
         <div className="cards">

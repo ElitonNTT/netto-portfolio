@@ -13,6 +13,11 @@
   --text-color: #fafafa;
 }
 
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -277,8 +282,9 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 #projetos .projetos {
+  height: 100vh;
   display: flex;
-  width: 50%;
+  width: 60%;
   padding: 2rem 0;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -293,6 +299,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     flex-wrap: nowrap;
     width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
     border-radius: 4px;
   }
 }
@@ -305,8 +313,8 @@ body::-webkit-scrollbar-thumb {
 }
 #projetos .cards {
   display: flex;
-  flex-direction: column;
   width: 25%;
+  flex-direction: column;
   padding: 2px;
   background: rgba(21, 30, 40, 0.9);
   box-shadow: 0 8px 32px 0 rgba(11, 18, 15, 0.8);
@@ -317,12 +325,14 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 414px) {
   #projetos .cards {
     width: 100%;
+    height: 500px;
     scroll-snap-align: end;
   }
 }
-#projetos .cards img {
-  width: 300px;
-  height: 100%;
+@media screen and (max-width: 414px) {
+  #projetos .cards img {
+    height: 100%;
+  }
 }
 
 #contato {
