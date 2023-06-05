@@ -7,9 +7,15 @@ export default function Socials() {
       <h1>Eliton Netto</h1>
       <h2>Desenvolvedor Front-End</h2>
       <div className="icons">
-        <SiInstagram />
-        <SiLinkedin />
-        <SiGithub />
+        <a href="https://www.instagram.com/eliton_netto_/" target="_blank">
+          <SiInstagram />
+        </a>
+        <a href="https://www.linkedin.com/in/eliton-netto/" target="_blank">
+          <SiLinkedin />
+        </a>
+        <a href="https://github.com/ElitonNTT" target="_blank">
+          <SiGithub />
+        </a>
       </div>
     </div>
   );

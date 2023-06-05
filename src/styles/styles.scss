@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 2rem 0;
 }
 
@@ -48,7 +48,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-self: flex-end;
     padding: 2rem;
-    height: 10vh;
+    height: 10dvh;
   }
   ul {
     display: flex;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb {
   .apresentacao {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 90dvh;
     gap: 2rem;
     color: var(--text-color);
     h1 {
@@ -89,6 +89,7 @@ body::-webkit-scrollbar-thumb {
       width: 4rem;
       &:hover {
         scale: 1.2;
+        cursor: pointer;
       }
     }
   }
@@ -124,13 +125,13 @@ body::-webkit-scrollbar-thumb {
 
   .box-imgs {
     display: flex;
-    height: 80vh;
+    height: 80dvh;
     width: 25%;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     @media screen and (max-width: 414px) {
-      height: 30vh;
+      height: 30dvh;
       width: 40%;
       margin-bottom: 2rem;
     }
@@ -279,7 +280,6 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 
   .projetos {
-    height: 100vh;
     display: flex;
     width: 60%;
     padding: 2rem 0;
